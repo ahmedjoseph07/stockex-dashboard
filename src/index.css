@@ -241,7 +241,7 @@ code {
 }
 
 .row .col:last-child h5 {
-  color: rgb(72, 194, 55);
+  color: rgb(47, 177, 21);
 }
 
 /* sudo selector */
@@ -280,14 +280,15 @@ code {
   text-decoration: none;
 }
 
-.menu {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: rgb(70, 70, 70);
+.menu{
+  font-size: 0.81rem;
+  font-weight: 800;
+  color: rgb(47, 48, 49);
 }
 
 .menu.selected {
-  color: rgb(245, 104, 52);
+  color: rgb(171, 180, 164);
+  font-size: 0.85rem;
 }
 
 hr {
@@ -320,14 +321,14 @@ hr {
 }
 
 .profile .username {
-  font-size: 0.8rem;
-  font-weight: 300;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 /* sudo selectors */
 
 .menu:hover {
-  color: rgb(245, 104, 52);
+  color: rgb(171, 180, 164);
 }
 
 .profile:hover {
@@ -336,7 +337,7 @@ hr {
 
 .profile:hover .username {
   cursor: pointer;
-  color: rgb(223, 91, 43);
+  color: rgb(132, 118, 118);
 }
 
 .orders {
