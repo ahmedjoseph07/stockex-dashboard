@@ -367,15 +367,27 @@ hr {
 
 .btn {
   text-decoration: none;
-  background: rgb(77, 77, 248);
+  background: rgb(29, 133, 3);
   padding: 10px 20px;
   border-radius: 2px;
   color: #fff;
   margin-top: 2%;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-red {
+  text-decoration: none;
+  background: rgb(159, 8, 8);
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
+  margin-top: 2%;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background: rgb(110, 110, 253);
+  background: rgb(70, 78, 66);
 }
 
 .title {
@@ -715,7 +727,7 @@ hr {
 }
 
 .actions {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -733,21 +745,24 @@ hr {
   margin-right: 8px;
   cursor: pointer;
 }
+.actions span{
+  display: flex;
+}
 
 .buy {
-  background-color: #4184f3;
+  background-color: #4dc824;
   color: #fff;
   font-weight: 400;
   font-size: 0.8rem;
-  border: 0.7px solid #4184f3;
+  border: 0.7px solid #aeaeae;
 }
 
 .sell {
-  background-color: #ff5722;
+  background-color: #c41c09;
   color: #fff;
   font-weight: 400;
   font-size: 0.8rem;
-  border: 0.7px solid #ff5722;
+  border: 0.7px solid #aeaeae;
 }
 
 .action {
@@ -841,4 +856,18 @@ hr {
 
 .action:hover {
   background-color: rgb(212, 212, 212);
+}
+
+.app-text{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 6px;
+  border: 2px solid black;
+  height: 100%;
+  background-color: rgb(207, 221, 207);
+  color: black;
+  font-weight: bolder;
 }
