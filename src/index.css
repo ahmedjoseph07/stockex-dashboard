@@ -1,3 +1,4 @@
+/* Initial CSS */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -33,12 +34,13 @@ code {
   text-align: right;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .funds p {
-  font-size: 0.8rem;
-  color: rgb(179, 179, 179);
+  font-size: 1rem;
+  color: rgb(33, 27, 27);
   margin-right: 8px;
 }
 
@@ -51,8 +53,15 @@ code {
   margin-left: 2px;
 }
 
-.btn-green {
-  background: #4caf50;
+.funds .btn-green {
+  text-decoration: none;
+  background: rgb(99, 159, 8);
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
+  margin-top: 2%;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .btn-blue {
@@ -60,14 +69,16 @@ code {
 }
 
 .row {
-  width: 100%;
+  width: 85%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 5%;
 }
 
+
 .col {
+  height: 100%;
   flex-basis: 48%;
   text-align: left;
 }
@@ -103,7 +114,7 @@ code {
   justify-content: space-between;
 }
 
-.table .data > * {
+.table .data>* {
   margin-bottom: 5%;
 }
 
@@ -143,10 +154,40 @@ code {
   background: #74a7fa;
 }
 
-.btn-green:hover {
-  background: #7bdd7f;
+.funds .btn-green:hover {
+  background: rgb(144, 205, 54);
+}
+.funds .btn-red:hover {
+  background: #dd887b;
+}
+.row .col .btn-green{
+  text-decoration: none;
+  background: rgb(99, 159, 8);
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
+  margin-top: 2%;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.row .col .btn-green:hover{
+  background: rgb(144, 205, 54);
+  color: black;
+}
+.orders .btn-green{
+  text-decoration: none;
+  background: rgb(99, 159, 8);
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
+  margin-top: 2%;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
+.orders .btn-green:hover{
+  background: rgb(144, 205, 54);
+}
 .title {
   font-size: 1.3rem;
   font-weight: 300;
@@ -250,6 +291,7 @@ code {
 }
 
 .menu-container {
+
   flex-basis: 68%;
   height: 100%;
   padding: 10px 20px;
@@ -280,7 +322,7 @@ code {
   text-decoration: none;
 }
 
-.menu{
+.menu {
   font-size: 0.81rem;
   font-weight: 800;
   color: rgb(47, 48, 49);
@@ -321,6 +363,7 @@ hr {
 }
 
 .profile .username {
+  margin: 0 auto;
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -375,7 +418,8 @@ hr {
   border-radius: 5px;
   font-weight: bold;
 }
-.btn-red {
+
+.funds .btn-red {
   text-decoration: none;
   background: rgb(159, 8, 8);
   padding: 10px 20px;
@@ -421,11 +465,11 @@ hr {
 }
 
 .order-table tr td:first-child p {
-    background: rgb(255, 197, 197);
-    color: rgb(233, 120, 120);
-    width: 50%;
-    text-align: center;
-    border-radius: 2px;
+  background: rgb(255, 197, 197);
+  color: rgb(233, 120, 120);
+  width: 50%;
+  text-align: center;
+  border-radius: 2px;
 }
 
 .order-table tr td:last-child {
@@ -580,6 +624,7 @@ hr {
 }
 
 .topbar-container {
+  margin-bottom: 10px;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -615,8 +660,8 @@ hr {
   justify-content: space-evenly;
 }
 
-.nifty > *,
-.sensex > * {
+.nifty>*,
+.sensex>* {
   margin-right: 8px;
 }
 
@@ -667,9 +712,9 @@ hr {
   border: none;
   padding: 15px 20px;
   font-size: 0.9rem;
-  font-weight: 400;
-  color: rgb(241, 241, 241);
-  border-bottom: 0.8px solid rgb(235, 234, 234);
+  font-weight: 600;
+  color: black;
+  border-bottom: 1px solid rgb(235, 234, 234);
 }
 
 .counts {
@@ -706,7 +751,7 @@ hr {
   align-items: center;
 }
 
-.item-info > * {
+.item-info>* {
   margin-right: 8px;
 }
 
@@ -745,7 +790,8 @@ hr {
   margin-right: 8px;
   cursor: pointer;
 }
-.actions span{
+
+.actions span {
   display: flex;
 }
 
@@ -828,7 +874,7 @@ hr {
   background-color: #f3f3f3;
 }
 
-.list li:hover > .actions {
+.list li:hover>.actions {
   display: flex;
   cursor: move;
 }
@@ -858,7 +904,7 @@ hr {
   background-color: rgb(212, 212, 212);
 }
 
-.app-text{
+.app-text {
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -870,4 +916,146 @@ hr {
   background-color: rgb(207, 221, 207);
   color: black;
   font-weight: bolder;
+}
+
+
+/* General Responsive Adjustments */
+body {
+  /* Adjust this value according to the height of your navbar */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Mobile First - Default for smaller screens */
+.dashboard-container {
+  flex-direction: column;
+  /* Stack items vertically on small screens */
+}
+
+.content,
+.indices-container,
+.watchlist-container {
+  width: 100%;
+  /* Full width on small screens */
+  padding: 5%;
+  margin: 0;
+}
+
+.row {
+  flex-direction: column;
+  /* Stack rows vertically on small screens */
+  align-items: flex-start;
+  /* Align items to the left */
+}
+
+.col {
+  width: 100%;
+  /* Full width for columns on small screens */
+  margin-bottom: 15px;
+}
+
+.order-table table,
+.order-table th,
+.order-table td {
+  font-size: 0.7rem;
+  /* Reduce font size for smaller screens */
+}
+
+.watchlist-number {
+  width: 100%;
+  left: 0;
+}
+
+/* Media Query for tablets and small screens (768px and below) */
+@media (max-width: 768px) {
+  body{
+    padding-top:4.8rem; 
+  }
+  .dashboard-container {
+    height: auto;
+    /* flex-direction: column; */
+  }
+
+  .content,
+  .menu-container,
+  .indices-container,
+  .watchlist-container {
+    width: 100%;
+    padding: 2%;
+  }
+
+  .order-table table {
+    font-size: 0.8rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Media Query for large tablets and small desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .content {
+    flex-basis: 100%;
+    padding: 3%;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex-basis: 48%;
+  }
+
+  .watchlist-container {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .indices-container,
+  .watchlist-container {
+    flex-basis: 48%;
+  }
+
+  .order-table table,
+  .order-table th,
+  .order-table td {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop Layout (above 1024px) */
+@media (min-width: 1025px) {
+  .dashboard-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content {
+    flex-basis: 68%;
+  }
+
+  .indices-container {
+    flex-basis: 32%;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex-basis: 48%;
+  }
 }
