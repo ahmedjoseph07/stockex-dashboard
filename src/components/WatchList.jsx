@@ -2,6 +2,10 @@ import React,{useState} from "react";
 import {KeyboardArrowUp,KeyboardArrowDown,MoreHoriz,BarChartOutlined} from '@mui/icons-material'
 import {Tooltip,Grow} from '@mui/material';
 import {watchlist} from '../data/data.js'
+import BuyAction from "./BuyAction"
+import SellAction from "./SellAction.jsx"
+import GeneralContext from "./GeneralContext.jsx";
+
 
 const WatchList = () => {
   return (
@@ -60,7 +64,9 @@ const WatchListItem = ({stock}) => {
   );
 };
 
+
 const WatchListActions = ({ uid }) => {
+
   return (
     <span className="actions">
       <span>
@@ -70,7 +76,11 @@ const WatchListActions = ({ uid }) => {
           arrow
           TransitionComponent={Grow}
         >
-          <button className="buy">Buy</button>
+        <div>
+        <GeneralContext.Provider>
+          {<BuyAction uid={uid} />}
+        </GeneralContext.Provider>
+          </div>
         </Tooltip>
         <Tooltip
           title="Sell (S)"
@@ -78,7 +88,11 @@ const WatchListActions = ({ uid }) => {
           arrow
           TransitionComponent={Grow}
         >
-          <button className="sell">Sell</button>
+          <div>
+          <GeneralContext.Provider>
+            {<SellAction uid={uid} />}
+          </GeneralContext.Provider> 
+          </div>
         </Tooltip>
         <Tooltip
           title="Analytics (A)"
@@ -98,4 +112,4 @@ const WatchListActions = ({ uid }) => {
       </span>
     </span>
   );
-};
+}
