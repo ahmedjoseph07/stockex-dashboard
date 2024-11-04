@@ -27,7 +27,7 @@ const Menu = () => {
           <p className="username"></p>
         </div>
     <div>
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+    <Navbar collapseOnSelect expand="md" bg="light" variant="light" sticky="top">
       <Container>
         {/* Hamburger toggle button for smaller screens */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
