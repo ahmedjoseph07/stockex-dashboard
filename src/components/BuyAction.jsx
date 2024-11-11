@@ -14,7 +14,7 @@ const BuyAction = ({uid}) => {
     const [stockPrice, setStockPrice] = useState();
 
     const handleBuyClick = () => {
-        axios.post("http://localhost:4000/newOrder", {
+        axios.post("https://stockex-backend.onrender.com/newOrder", {
             name: uid,
             qty: stockQuantity,
             price: stockPrice,
