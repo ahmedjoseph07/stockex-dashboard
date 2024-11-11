@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 // import {holdings} from '../data/data.js'
-
+import {BarChart} from "./BarChart"
 
 
 const Holdings = () => {
@@ -14,6 +14,20 @@ const Holdings = () => {
       setAllHoldings(res.data);
     })
   },[])
+
+  const labels = allHoldings.map((subArray) => subArray["name"]);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Stock Price",
+        data: allHoldings.map((stock) => stock.price),
+        backgroundColor: "rgba(145, 199, 232, 0.7)",
+      },
+    ],
+  };
+
   
   return (
     <>
@@ -53,10 +67,8 @@ const Holdings = () => {
               </tr>
             )
           })}
-
         </table>
       </div>
-
       <div className="row">
         <div className="col">
           <h5>
@@ -75,6 +87,7 @@ const Holdings = () => {
           <p>P&L</p>
         </div>
       </div>
+      <BarChart data={data}/>
     </>
   );
 };
